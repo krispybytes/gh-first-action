@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print greeting
-        run: |
-            echo "This is a destroy branch"
+        run: echo "This is a destroy branch"
       - name: Print Context
         run: echo "${{ toJSON(github) }}"
       - name: Print goodbye
