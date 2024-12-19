@@ -3,18 +3,16 @@ on:
   push:
     branches:
       - main
+      - 'destroy/*'
   workflow_dispatch:
   pull_request:
-     branches:
-       - "destroy/*"
 jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print greeting
         run: |
-            echo "Hello World"
-            echo "It Me Again"
+            echo "This is a destroy branch"
       - name: Print Context
         run: echo "${{ toJSON(github) }}"
       - name: Print goodbye
