@@ -13,7 +13,6 @@ jobs:
       - name: Print greeting
         run: |
             echo "This is a destroy branch"
-            echo ""
       - name: Print Context
         run: echo "${{ toJSON(github) }}"
       - name: Print goodbye
