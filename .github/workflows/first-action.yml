@@ -5,6 +5,8 @@ on:
       - main
   workflow_dispatch:
   pull_request:
+     branches:
+       - "destroy/*"
 jobs:
   first-job:
     runs-on: ubuntu-latest
