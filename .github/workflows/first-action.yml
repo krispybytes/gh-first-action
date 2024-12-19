@@ -13,5 +13,7 @@ jobs:
         run: |
             echo "Hello World"
             echo "It Me Again"
+      - name: Print Context
+        run: echo ${{ github }}
       - name: Print goodbye
         run: echo "Done - bye!"
