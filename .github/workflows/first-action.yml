@@ -12,6 +12,10 @@ jobs:
     steps:
       - name: Print greeting
         run: echo "Create File" >> file.txt
+      - name: Print Working Directory
+        run: pwd
+      - name: List Directory Contents
+        run: ls -ltr
       - name: Print Context
         run: echo "${{ toJSON(github) }}"
       - name: Print goodbye
