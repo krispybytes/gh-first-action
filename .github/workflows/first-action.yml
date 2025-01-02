@@ -16,3 +16,6 @@ jobs:
         run: echo "${{ toJSON(github) }}"
       - name: Print goodbye
         run: echo "Done - bye!"
+      - name: Print only on Push
+        if: github.event_name != 'pull_request' && github.ref_name == 'main'
+        run: echo "Print Only on Push"      
