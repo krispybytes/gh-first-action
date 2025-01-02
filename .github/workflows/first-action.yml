@@ -14,6 +14,7 @@ jobs:
         run: echo "This is a destroy branch"
       - name: Print Context
         run: echo "${{ toJSON(github) }}"
+        continue-on-error: true
       - name: Print goodbye
         run: echo "Done - bye!"
       - name: Print only on Push
