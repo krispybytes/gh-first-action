@@ -1,3 +1,3 @@
 # gh-first-action
 
-some random text
+Test
