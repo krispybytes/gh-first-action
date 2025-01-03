@@ -3,9 +3,10 @@ on:
   push:
     branches:
       - main
-      - 'destroy/*'
   workflow_dispatch:
   pull_request:
+      branches:
+      - 'destroy/*'
 jobs:
   first-job:
     runs-on: ubuntu-latest
