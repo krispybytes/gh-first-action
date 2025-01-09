@@ -1,10 +1,7 @@
 name: First Workflow
 on:
-  pull_request:
-    branches:
-      - 'main'
-    head:
-      - 'destroy/*'
+  pull_request_review:
+    types: [submitted]
 jobs:
   first-job:
     runs-on: ubuntu-latest
@@ -17,5 +14,5 @@ jobs:
       - name: Print goodbye
         run: echo "Done - bye!"
       - name: Print only on Push
-        if: github.event_name != 'pull_request' && github.ref_name == 'main'
-        run: echo "Print Only on Push"      
+        if: github.event.review.state == 'approved'
+        run: echo "This PR was approved"      
