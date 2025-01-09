@@ -1,3 +1,3 @@
 # gh-first-action
 
-Test
+Test PR Approval workflow
